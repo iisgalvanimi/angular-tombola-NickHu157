@@ -8,26 +8,29 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+
   </head>
   <body>
-    <h1 align="center">Tombola di Hu</h1>
-    <div align="center">
 
-      <p><font color="#000080"><strong>Sono AppComponent</strong></font></p>
+    <div align="center">
+      <p><font color="#008080">Sono CartellaComponent</font></p>
+
       <form>
 
         <div class="form-group">
-          <label>Dimmi un numero</label><br>
-          <label id="numcasuale">Numero casuale</label>
-        </div>
+          <p>Ultimo numero estratto</p><br>
+          <label>{{ultimonum}}</label>
+          <p>Lista dei numeri estratti</p>
+          <label *ngFor="let numero of numeriEstratti">- {{numero}} -</label>
 
-        <button id="bottone" type="submit" class="btn btn-warning" (click)="generanum()">Estrai</button>
+        </div>
 
       </form>
 
-      <app-cartella [numeriEstratti]="listanum" [ultimonum]="ultimonum"></app-cartella>
-
     </div>
+
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
